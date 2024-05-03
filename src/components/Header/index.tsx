@@ -1,17 +1,18 @@
 import type { FC } from "react";
 import styles from "./index.module.scss";
+import { Link } from 'react-router-dom';
 
 const Header: FC = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.icon}>
+      <Link to='/' className={styles.icon}>
         <img src="icons/favicon.svg" alt="icon" className={styles.image} />
         <p className={styles.text}>Text RPG</p>
-      </div>
+      </Link>
       <div className={styles.menu}>
-        <h2>セーブ</h2>
-        <h2>ランキング</h2>
-        <h2>ログイン</h2>
+        <Link to='/' className={styles.link}>ゲーム</Link>
+        <Link to='/ranking' className={styles.link}>ランキング</Link>
+        <Link to='/login' className={styles.link}>ログイン</Link>
       </div>
     </header>
   );

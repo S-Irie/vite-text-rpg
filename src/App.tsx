@@ -1,14 +1,21 @@
 import type { FC } from "react";
+import { Route, Routes } from "react-router-dom";
 import styles from "./App.module.scss";
-import DrawWindow from "./components/DrawWindow";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Login from "./pages/Login";
+import Ranking from "./pages/Ranking";
+import Top from "./pages/Top";
 
 const App: FC = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.app}>
       <Header />
-      <DrawWindow />
+      <Routes>
+        <Route path="/" element={<Top />} />
+        <Route path="/ranking" element={<Ranking />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
       <Footer />
     </div>
   );
