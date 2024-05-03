@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'JF-Dot-K14';
+    src: url('fonts/JF-Dot-K14.ttf') format('truetype');
+}
+
+body {
+    font-family: 'JF-Dot-K14', fallback;
+}
